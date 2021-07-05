@@ -10,9 +10,12 @@ Django==3.2.5
 django-filter==2.4.0
 django-templated-mail==1.1.1
 djangorestframework==3.12.4
+djangorestframework-jsonapi==4.2.0
+djangorestframework-jwt==1.11.0
 djangorestframework-simplejwt==4.7.1
 djoser==2.1.0
 idna==2.10
+inflection==0.5.1
 itypes==1.2.0
 Jinja2==3.0.1
 Markdown==3.3.4
