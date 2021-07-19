@@ -16,3 +16,10 @@ class Post(models.Model):
         related_name='liked_posts',
         blank=True,
     )
+
+    @property
+    def likes(self):
+        return self.users_like.count()
+
+    class Meta:
+        ordering = ['created']
