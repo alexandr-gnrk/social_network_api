@@ -28,7 +28,7 @@ def post_like(request, pk):
     post = Post.objects.get(id=pk)
     user = request.user
 
-    if user not in post.users_like.all():
+    if not post.users_like.filter(pk=user.pk).exists():
         post.users_like.add(user)
         return Response(status=status.HTTP_200_OK)
 
@@ -41,8 +41,8 @@ def post_unlike(request, pk):
     post = Post.objects.get(id=pk)
     user = request.user
 
-    if user in post.users_like.all():
+    if post.users_like.filter(pk=user.pk).exists():
         post.users_like.remove(user)
         return Response(status=status.HTTP_200_OK)
 
-    return Response(status=status.HTTP_409_CONFLICT) 
+    return Response(status=status.HTTP_409_CONFLICT)
