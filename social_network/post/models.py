@@ -31,6 +31,6 @@ class Like(models.Model):
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE)
-    time = models.DateTimeField(
+    date = models.DateField(
         auto_now_add=True, db_index=True)
         

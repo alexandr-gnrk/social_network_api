@@ -9,5 +9,5 @@ class PostAdmin(admin.ModelAdmin):
 
 @admin.register(Like)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('user', 'post', 'time')
-    list_filters = ('time',)
+    list_display = ('user', 'post', 'date')
+    list_filters = ('date',)
