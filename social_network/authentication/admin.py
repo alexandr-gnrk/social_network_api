@@ -6,5 +6,5 @@ from .models import User
 @admin.register(User)
 class UserAdmin(BaseUserAdmin):
     fieldsets = BaseUserAdmin.fieldsets + (
-        (None, {'fields': ('last_seen',)}),
-    )
+            (None, {'fields': ('last_seen',)}),
+        )

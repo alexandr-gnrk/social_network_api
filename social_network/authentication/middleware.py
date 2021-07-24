@@ -2,7 +2,7 @@ from django.utils import timezone
 from django.contrib.auth import get_user_model
 
 
-class LastSeenUserMiddleware(object):
+class LastSeenUserMiddleware:
 
     def __init__(self, get_response):
         self.get_response = get_response
