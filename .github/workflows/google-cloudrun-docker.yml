@@ -94,7 +94,7 @@ jobs:
 
       - name: Build and Push Container
         run: |-
-          docker build -t "${{ secrets.GAR_LOCATION }}-docker.pkg.dev/${{ secrets.PROJECT_ID }}/${{ secrets.SERVICE }}:${{ github.sha }}" ./
+          docker build -t "${{ secrets.GAR_LOCATION }}-docker.pkg.dev/${{ secrets.PROJECT_ID }}/${{ secrets.SERVICE }}:${{ github.sha }}" ./social_network
           docker push "${{ secrets.GAR_LOCATION }}-docker.pkg.dev/${{ secrets.PROJECT_ID }}/${{ secrets.SERVICE }}:${{ github.sha }}"
 
       # END - Docker auth and build
