@@ -11,8 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends gcc libmagic1\
 
 COPY requirements.txt /app/
 RUN pip install --upgrade pip && \
-    pip install -r requirements.txt && \
-    pip install gunicorn
+    pip install -r requirements.txt
 
 COPY . /app/
 
